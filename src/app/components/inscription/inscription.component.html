@@ -1,0 +1,162 @@
+<div class="mt-4 text-white">
+  <p>Under nav bar</p>
+</div>
+<div class="container mt-5 policy">
+
+  <form [formGroup]="newInscriptionFormGroup" (ngSubmit)="submitInscription()">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="mb-3 ml">
+          <label class="form-label">
+            <b style="color:#000000">Prénom</b><span class="required-field">*</span>
+          </label>
+          <input type="text" formControlName="firstname" class="form-control" placeholder="exemple: Karl">
+          <span class="text-danger" *ngIf="newInscriptionFormGroup.controls['firstname'].touched
+                && newInscriptionFormGroup.controls['firstname'].errors
+                && newInscriptionFormGroup.controls['firstname'].errors!['required']">
+                Le prénom est requis
+             </span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">
+            <b style="color:#000000">Nom</b><span class="required-field">*</span>
+          </label>
+          <input type="text" formControlName="name" class="form-control" placeholder="exemple: WALID">
+          <span class="text-danger" *ngIf="newInscriptionFormGroup.controls['name'].touched
+              && newInscriptionFormGroup.controls['name'].errors
+              && newInscriptionFormGroup.controls['name'].errors!['required']">
+              Le nom est requis
+              </span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">
+            <b style="color:#000000">Profession</b><span class="required-field">*</span>
+          </label>
+          <input type="text" formControlName="profession" class="form-control" placeholder="exemple: Ingénieur">
+          <span class="text-danger" *ngIf="newInscriptionFormGroup.controls['profession'].touched
+              && newInscriptionFormGroup.controls['profession'].errors
+              && newInscriptionFormGroup.controls['profession'].errors!['required']">
+              La profession est requise
+              </span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">
+            <b style="color:#000000">Mobile</b><span class="required-field">*</span>
+          </label>
+          <input type="text" formControlName="phone" class="form-control" placeholder="exemple: +216 12345678">
+          <span class="text-danger" *ngIf="newInscriptionFormGroup.controls['phone'].touched
+              && newInscriptionFormGroup.controls['phone'].errors
+              && newInscriptionFormGroup.controls['phone'].errors!['required']">
+              Le numéro de téléphone est requis
+              </span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">
+            <b style="color:#000000">Email</b><span class="required-field">*</span>
+          </label>
+          <input type="text" formControlName="email" class="form-control" placeholder="exemple: walid@google.com">
+          <span class="text-danger" *ngIf="newInscriptionFormGroup.controls['email'].touched
+              && newInscriptionFormGroup.controls['email'].errors
+              && newInscriptionFormGroup.controls['email'].errors!['required']">
+              L'email est requis
+              </span>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <div class="mb-3">
+          <label class="form-label">
+            <b style="color:#000000">Civilité</b><span class="required-field">*</span>
+          </label>
+          <select formControlName="gender" class="form-control">
+            <option>Monsieur</option>
+            <option>Madame</option>
+          </select>
+          <span class="text-danger" *ngIf="newInscriptionFormGroup.controls['gender'].touched
+              && newInscriptionFormGroup.controls['gender'].errors
+              && newInscriptionFormGroup.controls['gender'].errors!['required']">
+              La civilité est requise
+              </span>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <b style="color:#000000">Type</b><span class="required-field">*</span>
+          </label>
+          <select formControlName="type" class="form-control">
+            <option>Sponsors</option>
+            <option>Exposant</option>
+            <option>Visiteur</option>
+            <option>Média</option>
+            <option>Entrepreneur</option>
+            <option>Partenaire</option>
+            <option>Investisseur</option>
+            <option>Intervenant</option>
+          </select>
+          <span class="text-danger" *ngIf="newInscriptionFormGroup.controls['type'].touched
+              && newInscriptionFormGroup.controls['type'].errors
+              && newInscriptionFormGroup.controls['type'].errors!['required']">
+              Le secteur d'activité est requis
+              </span>
+        </div>
+
+
+
+        <div class="mb-3">
+          <label class="form-label">
+            <b style="color:#000000">Secteur d'activité</b><span class="required-field">*</span>
+          </label>
+          <select formControlName="secteur" class="form-control">
+            <option>Agro-alimentaire</option>
+            <option>Architecture et design</option>
+            <option>Aéronautique</option>
+            <option>Audit et Conseil</option>
+            <option>Assurances</option>
+            <option>Banques</option>
+            <option>BTP et infrastructures</option>
+            <option>Commerce et grande distribution</option>
+            <option>Décoration et Intérieur</option>
+            <option>Electrique et électronique</option>
+            <option>Energie et environnement</option>
+            <option>Enseignement Supérieur et Education</option>
+            <option>Equipement industriel</option>
+            <option>Formation Professionnelle</option>
+            <option>Fond d’investissement</option>
+            <option>Immobilier</option>
+            <option>Industrie Pharmaceutique</option>
+            <option>Industrie chimique</option>
+            <option>Informatique</option>
+            <option>Matériaux de Construction</option>
+            <option>Mécanique et Métallurgie</option>
+            <option>Médias et Communication</option>
+            <option>Mines</option>
+            <option>Transport et Logistique</option>
+            <option>Télécommunication</option>
+            <option>TIC</option>
+            <option>Textiles</option>
+            <option>Tourisme et loisirs</option>
+            <option>Santé</option>
+            <option>Sécurité</option>
+            <option>Autres</option>
+          </select>
+          <span class="text-danger" *ngIf="newInscriptionFormGroup.controls['secteur'].touched
+              && newInscriptionFormGroup.controls['secteur'].errors
+              && newInscriptionFormGroup.controls['secteur'].errors!['required']">
+              Le secteur d'activité est requis
+              </span>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label"><b style="color:#000000">Site web</b></label>
+          <input type="text" formControlName="website" class="form-control" placeholder="exemple: www.google.com">
+        </div>
+        <div class="mb-3 text-center">
+          <button [disabled]="!newInscriptionFormGroup.valid" class="btn btn-warning btn-lg text-white">
+            Enregistrer
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>

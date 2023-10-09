@@ -2,12 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']
 })
-export class AppComponent implements OnInit {
-  title = 'forumgabontunisie';
+export class AboutComponent implements OnInit{
 
   constructor(private router: Router) {
   }
@@ -15,12 +14,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  gotoInscriptionComponent() :void{
+  gotoInscriptionComponent() : void {
     this.router.navigate(["inscription"]).then();
-  }
-
-  gotoContactComponent() :void{
-    this.router.navigate(["contact"]).then();
   }
 
   closeMenuOnClick() :void {
@@ -33,8 +28,4 @@ export class AppComponent implements OnInit {
       }
     }
   }
-
-
-
-
 }

@@ -1,0 +1,38 @@
+/* ABOUT SECTION STYLE*/
+.about-circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Ajustez la hauteur et la largeur selon vos besoins */
+  width: 300px;
+  background-color: #ffc400; /* Couleur jaune */
+  border-radius: 50%; /* Pour créer un cercle */
+  overflow: hidden; /* Cache le débordement de l'image */
+  border: 10px solid #ffc400; /* Bordure jaune de 10px (ajustez selon l'épaisseur souhaitée) */
+}
+
+.about-circle {
+  width: 150%; /* Ajustez la largeur pour l'aplatir à gauche et à droite */
+  height: 100%;
+  overflow: hidden; /* Cache le débordement de l'image */
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-text{
+  text-align: justify;
+  font-family: 'Ubuntu', 'sans-serif';
+}
+
+.about-size-img{
+  height: 960px;
+  width: 955px;
+}
+
+.main-font-family{
+  font-family: 'Ubuntu', 'sans-serif';
+}

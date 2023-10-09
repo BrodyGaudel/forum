@@ -1,0 +1,83 @@
+<div class="mt-4 text-white">
+  <p>Under nav bar</p>
+</div>
+<div class="mt-5 container policy">
+  <h4 class="text-center ">Pour toutes questions, veulliez remplire le formulaire ci-dessous.</h4>
+  <div class="mt-2 row">
+    <div class="col-md-6">
+      <form [formGroup]="newContactFormGroup" (ngSubmit)="handleContact()">
+
+        <div class="mb-3">
+          <label class="form-label">
+            <b style="color:#000000">Nom et prénom</b><span class="required-field">*</span>
+          </label>
+          <input type="text" formControlName="name" class="form-control" placeholder="exemple: Bayrem Skander">
+          <span class="text-danger" *ngIf="newContactFormGroup.controls['name'].touched
+            && newContactFormGroup.controls['name'].errors
+            && newContactFormGroup.controls['name'].errors!['required']">
+              Le prénom ou le nom est requis
+          </span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">
+            <b style="color:#000000">Email</b><span class="required-field">*</span>
+          </label>
+          <input type="text" formControlName="from" class="form-control" placeholder="exemple : bayrem.skander@mail.com">
+          <span class="text-danger" *ngIf="newContactFormGroup.controls['from'].touched
+            && newContactFormGroup.controls['from'].errors
+            && newContactFormGroup.controls['from'].errors!['required']">
+              L'email est requis
+          </span>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <b style="color:#000000">Sujet</b><span class="required-field">*</span>
+          </label>
+          <input type="text" formControlName="subject" class="form-control" placeholder="exemple : Renseignements">
+          <span class="text-danger" *ngIf="newContactFormGroup.controls['subject'].touched
+            && newContactFormGroup.controls['subject'].errors
+            && newContactFormGroup.controls['subject'].errors!['required']">
+              Le sujet est requis
+          </span>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <b style="color:#000000">Message</b><span class="required-field">*</span>
+          </label>
+          <textarea type="text" formControlName="body" class="form-control" placeholder="exemple : Bonjour">
+             </textarea>
+          <span class="text-danger" *ngIf="newContactFormGroup.controls['body'].touched
+            && newContactFormGroup.controls['body'].errors
+            && newContactFormGroup.controls['body'].errors!['required']">
+              Un message est requis
+          </span>
+        </div>
+
+        <button [disabled]="!newContactFormGroup.valid" class="btn btn-warning btn-lg">
+          <b class="text-center text-white">
+            Envoyez !
+          </b>
+        </button>
+      </form>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+      <h4><b>Adresse</b></h4>
+      <p>
+        14 Rue Hammamet, El AOUINA<br>
+        Tunis, Tunisie.
+      </p>
+      <p>
+        forumgabontunisie@gmail.com
+      </p>
+      <p>
+        TEL : +216 27 899 266 / +216 20 165 845
+      </p>
+      <div class="mt-3">
+        <img src="assets/logo_forum.png" alt="logo_forum" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
